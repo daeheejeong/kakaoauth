@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>카카오 로그인 성공</title>
+</head>
+<body>
+    <h1>로그인 성공!!</h1>
+    <table>
+        <thead>
+            <tr>
+                <td>속성</td>
+                <td>값</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>id</td>
+                <td th:text="${kakaoUserInfo.getId()}"></td>
+            </tr>
+            <tr>
+                <td>닉네임</td>
+                <td th:text="${kakaoUserInfo.getNickname()}"></td>
+            </tr>
+            <tr>
+                <td>프로필 이미지</td>
+                <img th:src="${kakaoUserInfo.getProfileImage()}" />
+            </tr>
+            <tr>
+                <td>썸네일 이미지</td>
+                <img th:src="${kakaoUserInfo.getThumbnailImage()}" />
+            </tr>
+            <tr>
+                <td>프로필 제공 동의여부</td>
+                <td th:text="${kakaoUserInfo.getProfileNeedsAgreement()}"></td>
+            </tr>
+            <tr>
+                <td>이메일 존재 여부</td>
+                <td th:text="${kakaoUserInfo.getHasEmail()}"></td>
+            </tr>
+            <tr>
+                <td>이메일 제공 동의 여부</td>
+                <td th:text="${kakaoUserInfo.getEmailNeedsAgreement()}"></td>
+            </tr>
+            <tr>
+                <td>이메일 유효성 여부</td>
+                <td th:text="${kakaoUserInfo.getIsEmailValid()}"></td>
+            </tr>
+            <tr>
+                <td>이메일 인증 여부</td>
+                <td th:text="${kakaoUserInfo.getIsEmailVerified()}"></td>
+            </tr>
+            <tr>
+                <td>이메일</td>
+                <td th:text="${kakaoUserInfo.getEmail()}"></td>
+            </tr>
+            <tr>
+                <td>생일 존재 여부</td>
+                <td th:text="${kakaoUserInfo.getHasBirthday()}"></td>
+            </tr>
+            <tr>
+                <td>생일 제공 동의 여부</td>
+                <td th:text="${kakaoUserInfo.getBirthdayNeedsAgreement()}"></td>
+            </tr>
+            <tr>
+                <td>성별 존재 여부</td>
+                <td th:text="${kakaoUserInfo.getHasGender()}"></td>
+            </tr>
+            <tr>
+                <td>성별 제공 동의 여부</td>
+                <td th:text="${kakaoUserInfo.getGenderNeedsAgreement()}"></td>
+            </tr>
+            <tr>
+                <td>성별</td>
+                <td th:text="${kakaoUserInfo.getGender()}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
